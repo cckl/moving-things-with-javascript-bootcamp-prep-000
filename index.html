@@ -23,11 +23,11 @@
       }
       
       function moveToRight() {
-        let rightNumbers = dodger.style.right.replace('', '0')
+        let rightNumbers = dodger.style.right.replace('', '180')
         let right = parseInt(rightNumbers, 10)
         console.log(rightNumbers);
         if (right >= 0) {
-          dodger.style.right = `${right + 10}px`
+          dodger.style.right = `${right - 10}px`
         }
       }
       
