@@ -15,17 +15,24 @@
       dodger.style.bottom = '0px'
       
       function moveToLeft() {
-        var leftNumbers = dodger.style.left.replace('px', '')
-        var left = parseInt(leftNumbers, 10)
+        let leftNumbers = dodger.style.left.replace('px', '')
+        let left = parseInt(leftNumbers, 10)
         if (left > 0) {
           dodger.style.left = `${left - 10}px`
         }
+      }
+      
+      function moveToRight() {
+        let rightNumbers = dodger.style.right
       }
       
       document.addEventListener('keydown', function(e) {
         console.log(e.which)
         if (e.which === 37) {
           moveToLeft();
+        }
+        if (e.which === 39) {
+          moveToRight();
         }
       })
     </script>
